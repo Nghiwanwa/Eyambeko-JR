@@ -1,1 +1,168 @@
-<p>jackpot works!</p>
+
+
+    <!-- Navigation Bar -->
+<app-nav></app-nav>
+<div class="wrapper">
+    <div class="container-fluid">
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="btn-group pull-right">
+                        <ol class="breadcrumb hide-phone p-0 m-0">
+                            <li class="breadcrumb-item"><a href="#">Eyambeko JR</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Dashboard</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title end breadcrumb -->
+            <!-- Column -->
+            
+     
+           
+                <div class="card bg-white m-b-30">
+                    <div class="card-body new-user">
+                        <h5 class="header-title mb-4 mt-0">Table Location</h5>
+                        <div class="text-right">
+                            <form class="form-inline md-form form-sm">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                            </form>
+                <div class="addbutton">
+                      <a href="javascript:;" class="btn btn-success" (click)="newJackpot()" data-toggle="modal" data-target="#addjackpot"> Add Jackpot  </a>
+                </div>  
+                  </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Jackpot Location</th>
+                                        <th>Jackpot Name</th>
+                                        <th>Active Jackpot</th>
+                                        <th>Inactive Jackpots</th>
+                                        <th>Total Jackpots</th>
+                                        <th>Agent Assigned</th>
+                                        <th>Edit</th>
+                                        <th>
+                                                 <!-- User-->
+                                <li class="list-inline-item dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                       <i class="mdi mdi-drag-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                        <!-- item-->
+                                        
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-grease-pencil text-muted"></i> Edit</a>
+                                        <a class="dropdown-item" href="#"><i class="ion-ios7-trash-outline text-muted"></i> Delete</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-settings m-r-5 text-muted"></i> Assign</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-houzz text-muted"></i> Add Jackpot</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-barcode-scan m-r-5 text-muted"></i> Print Bar code</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-currency-usd text-muted"></i> Record Payment</a>
+                                    </div>
+                                </li>
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let jackpot of jackpotService.jackpots">
+                                        <td>{{jackpot.loaction}</td>
+                                        <td>{{jackpot.jackpotname}}</td>
+                                        <td>{{jackpot.activejackpot}}</td>
+                                        <td>{{jackpot.inactivejackpot}}</td>
+                                        <td>{{jackpot.totaljackpot}}</td>
+                                        <td>{{jackpot.agentname}}</td>
+                                       
+                                        
+                                        <td>
+                                            <a href="javascript:;" (click)="jackpotService.selectedjackpot=jackpot"  class="edit" data-toggle="modal" data-target="#addjackpot"><i class="fa fa-edit" data-toggle="tooltip" title="Edit"></i></a>
+                                          </td>
+                                        <td>
+                                            <a href="javascript:;" (click)="jackpotService.selectedjackpot=jackpot"  class="delete" data-toggle="modal" data-target="#deletejackpot"><i class="fa fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                </div>
+            </div>
+        <div class="space" style="margin-top: 10px;"></div>
+      
+</div>
+
+    </div> <!-- end container -->
+</div>
+<!-- end wrapper -->
+<!-- footer -->
+
+<!-- modal  -->
+  <!-- Edit Modal HTML -->
+  <div id="addjackpot" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">						
+                    <h4 class="modal-title">Add Jackpot</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">					
+                
+                    <div class="form-row mb-4">
+                            <div class="col">
+                                <!-- location name -->
+                                <input type="text"  name="_locationname" [(ngModel)]="locationService.selectedlocation.locationname" class="form-control" required placeholder="locationname">
+                            </div>
+                            <div class="col">
+                                <!-- Card address -->
+                                <input type="text" name="_fullname" [(ngModel)]="locationService.selectedlocation.fullname" class="form-control" required placeholder="Full Name">
+                            </div>
+                        </div>
+                        <div class="form-row mb-4">
+                            <div class="col" [hidden]="locationService.selectedlocation._id">
+                                <!-- Card Number -->
+                                <input type="password" name="_password" [(ngModel)]="locationService.selectedlocation.password" class="form-control" required placeholder="Password">
+                            </div>
+
+                            <div class="col">
+                                    <select class="custom-select custom-select-sm" name="_role" [(ngModel)]="locationService.selectedlocation.role">
+                                        <option *ngFor="let role of locationService.roles" [value]="role">{{role}}</option>
+                                    </select>
+                              </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" value="Cancel"></button>
+                    <button class="btn btn-info" [hidden]="locationService.selectedlocation._id" (click)="locationService.addlocation();">Save</button>
+                    <button class="btn btn-info" [hidden]="!locationService.selectedlocation._id" (click)="locationService.updatelocation();">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Delete Modal HTML -->
+<div id="deletejackpot" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">						
+                    <h4 class="modal-title">Delete Jackpot</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">					
+                    <p>Are you sure you want to delete these Records?</p>
+                    <p class="text-warning"><small>This action cannot be undone</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button  class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-danger" (click)="locationService.deletelocation();" value="Delete">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

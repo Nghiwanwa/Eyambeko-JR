@@ -51,7 +51,7 @@ const routes: Routes = [
   
   {
     path: '',
-    redirectTo:'/home',
+    redirectTo:'/location',
     pathMatch:'full'
   }
 ];

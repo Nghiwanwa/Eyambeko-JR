@@ -1,7 +1,7 @@
 /*
-Template Name: Annex - Bootstrap 4 Admin Dashboard
-Author: Mannatthemes
-Website: www.mannatthemes.com
+Site Name Name: Eyambeko Records
+Author: Siskus Infinity Technology
+Website: www.sit.siskus.com
 File: Main Css File
 */
 /*
@@ -124,10 +124,10 @@ code {
 }
 
 .footer {
-  background-color: #ffffff;
+  background-color: #7a2126;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   bottom: 0;
-  color: #2d3b48;
+  color: #f3f4f5;
   text-align: center;
   padding: 20px 30px;
   position: absolute;
@@ -164,6 +164,11 @@ code {
   line-height: 30px;
   text-align: center;
   width: 30px;
+}
+/* added stylesheet */
+.addbutton
+{
+    margin-bottom: 15px;
 }
 
 /* ==============
@@ -2919,17 +2924,28 @@ body {
 }
 
 #topnav .topbar-main {
-  background-color: #ffffff;
+  
+    background-color:  #416e2e;
+
 }
+/* eyambeko colors
+1. #952e34
+2. #3b3a37;
+3.#70603f
+*/
+
 
 #topnav .topbar-main .logo {
   color: #ffffff !important;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
-  line-height: 60px;
+  line-height: 67px;
   text-transform: uppercase;
   float: left;
+}
+#topnav .topbar-main .logo .img{
+ size: 240px;
 }
 
 #topnav .topbar-main .logo-small {
@@ -2975,7 +2991,7 @@ body {
 }
 
 #topnav .navbar-custom {
-  background-color: #5b6be8;
+  background-color: #3b3a37;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   padding-left: 0;
@@ -2994,7 +3010,7 @@ body {
 }
 
 #topnav .navbar-toggle:hover span {
-  background-color: #2d3b48;
+  background-color: rgba(99, 21, 21, 0.801);
 }
 
 #topnav .navbar-toggle .lines {
@@ -3011,7 +3027,7 @@ body {
 #topnav .navbar-toggle span {
   height: 2px;
   width: 100%;
-  background-color: rgba(45, 59, 72, 0.8);
+  background-color: rgba(110, 21, 21, 0.76);
   display: block;
   margin-bottom: 5px;
   -webkit-transition: -webkit-transform .5s ease;

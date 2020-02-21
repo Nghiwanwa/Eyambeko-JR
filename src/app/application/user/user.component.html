@@ -1,159 +1,161 @@
 
-        <app-nav></app-nav>
-        <div class="wrapper">
-            <div class="container-fluid">
-                <!-- Page-Title -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="page-title-box">
-                            <div class="btn-group pull-right">
-                                <ol class="breadcrumb hide-phone p-0 m-0">
-                                    <li class="breadcrumb-item"><a href="#">Eyambeko JR</a></li>
-                                    <li class="breadcrumb-item active">Dashboard</li>
-                                </ol>
-                            </div>
-                            <h4 class="page-title">Dashboard</h4>
-                        </div>
+    
+
+    <!-- Navigation Bar -->
+<app-nav></app-nav>
+<div class="wrapper">
+    <div class="container-fluid">
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="btn-group pull-right">
+                        <ol class="breadcrumb hide-phone p-0 m-0">
+                            <li class="breadcrumb-item"><a href="#">Eyambeko JR</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
                     </div>
-                </div>
-      
-            <div class="card bg-white m-b-30">
-                <div class="card-body new-user">
-                    <h5 class="header-title mb-4 mt-0">Topping Location</h5>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="border-top-0" style="width:60px;">Town/city</th>
-                                    <th class="border-top-0">Sub Location</th>
-                                    <th class="border-top-0">Bar/Store Name</th>
-                                    <th class="border-top-0">Earnings</th>
-                                    <th class="border-top-0">Total Jackpots</th>                                    
-                                    <th class="border-top-0">Agent Name</th>
-                                    <th class="border-top-0">Contact Details</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                     Windhoek
-                                    <td>
-                                       Havana
-                                    </td>
-                                    <td>                                                                
-                                        Okashandja
-                                    </td>
-                                    <td>N$ 100 000</td>
-                                    <td>10</td>                                   
-                                    <td>
-                                     Tomas Dee
-                                    </td>
-                                        <td>
-                                         081 800 3073
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                    Oshakati
-                                    <td>
-                                     New Location
-                                  </td>
-                                  <td>                                                                
-                                      Siskus Trading
-                                  </td>
-                                  <td>N$ 77 000</td>
-                                  <td>13</td>                                   
-                                  <td>
-                                   Maya Cleo
-                                  </td>
-                                      <td>
-                                       081 800 3333
-                                  </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                Ondangwa
-                                <td>
-                                   Omahenene
-                                </td>
-                                <td>                                                                
-                                   Sport Life 
-                                </td>
-                                <td>N$ 60 500</td>
-                                <td>6</td>                                   
-                                <td>
-                                 Immanuel Fransiskus
-                                </td>
-                                    <td>
-                                     081 449 4796
-                                </td>
-                            </tr>
-                            <tr>
-                              <td>
-                               Ongwediva
-                              <td>
-                                 Keila 
-                              </td>
-                              <td>                                                                
-                                  Motowange Bar
-                              </td>
-                              <td>N$ 55 000</td>
-                              <td>10</td>                                   
-                              <td>
-                             Natangwe Kay
-                              </td>
-                                  <td>
-                                   081 876 0100
-                              </td>
-                          </tr>
-                          <tr>
-                            <td>
-                             Windhoek
-                            <td>
-                              Khomasdal
-                            </td>
-                            <td>                                                                
-                               Nam bar
-                            </td>
-                            <td>N$ 4 000</td>
-                            <td>6</td>                                   
-                            <td>
-                             Tmotues nghiwanwa
-                            </td>
-                                <td>
-                                 081 300 4003
-                            </td>
-                        </tr>
-                        <tr>
-                          <td>
-                          Halushu
-                          <td>
-                            Kinona
-                          </td>
-                          <td>                                                                
-                            washa bar
-                          </td>
-                          <td>N$ 41 000</td>
-                          <td>12</td>                                   
-                          <td>
-                           Jimmy Hailonga
-                          </td>
-                              <td>
-                                <div class="col-xs-6 col-sm-3 m-b-30">
-                                             <button type="button" class="btn btn-primary waves-effect waves-light" id="sa-warning">Delete</button>
-                                </div>
-                          </td>
-                          
-                      </tr>   
-                            </tbody>
-                        </table>
-                        
-                    </div>
+                    <h4 class="page-title">Dashboard</h4>
                 </div>
             </div>
         </div>
-     </div>
+        <!-- end page title end breadcrumb -->
+            <!-- Column -->
+            
+     
+           
+                <div class="card bg-white m-b-30">
+                    <div class="card-body new-user">
+                        <h5 class="header-title mb-4 mt-0">Table User</h5>
+                        <div class="text-right">
+                            <form class="form-inline md-form form-sm">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                            </form>
+                    <div class="addbutton">
+                      <a href="javascript:;" class="btn btn-success" (click)="newUser()" data-toggle="modal" data-target="#adduser"> Add User </a>
+                    </div>
+                  </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Role</th>
+                                        <th>Full Name</th>
+                                        <th>Username</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                        <th>
+                                                 <!-- User-->
+                                                    <li class="list-inline-item dropdown">
+                                                        <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                                        aria-haspopup="false" aria-expanded="false">
+                                                        <i class="mdi mdi-drag-horizontal"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                                            <!-- item-->
+                                                            
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-grease-pencil text-muted"></i> Edit</a>
+                                                            <a class="dropdown-item" href="#"><i class="ion-ios7-trash-outline text-muted"></i> Delete</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-settings m-r-5 text-muted"></i> Assign</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-houzz text-muted"></i> Add user</a>
+                                                           
+                                                        </div>
+                                                    </li>
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let user of peopleService.users">
+                                        <td>{{user.role}}</td>
+                                        <td>{{user.fullname}}</td>
+                                        <td>{{user.username}}</td>
+     
+                                        <td>
+                                            <a href="javascript:;" (click)="peopleService.selectedUser=user"  class="edit" data-toggle="modal" data-target="#adduser"><i class="fa fa-edit" data-toggle="tooltip" title="Edit"></i></a>
+                                          </td>
+                                        <td>
+                                            <a href="javascript:;" (click)="peopleService.selectedUser=user"  class="delete" data-toggle="modal" data-target="#deleteuser"><i class="fa fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>      
+                </div>
+            </div>
+        <div class="space" style="margin-top: 10px;"></div> 
+</div>
 
-  <app-footer></app-footer>
+    </div> <!-- end container -->
+</div>
+<!-- end wrapper -->
+<!-- footer -->
 
-        
+<!-- modal  -->
+  <!-- Edit Modal HTML -->
+  <div id="adduser" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">						
+                    <h4 class="modal-title">User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">					
+                
+                    <div class="form-row mb-4">
+                            <div class="col">
+                                <!-- user name -->
+                                <input type="text"  name="_username" [(ngModel)]="peopleService.selectedUser.username" class="form-control" required placeholder="Username">
+                            </div>
+                            <div class="col">
+                                <!-- Card address -->
+                                <input type="text" name="_fullname" [(ngModel)]="peopleService.selectedUser.fullname" class="form-control" required placeholder="Full Name">
+                            </div>
+                        </div>
+                        <div class="form-row mb-4">
+                            <div class="col" [hidden]="peopleService.selectedUser._id">
+                                <!-- Card Number -->
+                                <input type="password" name="_password" [(ngModel)]="peopleService.selectedUser.password" class="form-control" required placeholder="Password">
+                            </div>
+
+                            <div class="col">
+                                    <select class="custom-select custom-select-sm" name="_role" [(ngModel)]="peopleService.selectedUser.role">
+                                        <option *ngFor="let role of peopleService.roles" [value]="role">{{role}}</option>
+                                    </select>
+                              </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" value="Cancel"></button>
+                    <button class="btn btn-info" [hidden]="peopleService.selectedUser._id" (click)="peopleService.addUser();">Save</button>
+                    <button class="btn btn-info" [hidden]="!peopleService.selectedUser._id" (click)="peopleService.updateUser();">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Delete Modal HTML -->
+<div id="deleteuser" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">						
+                    <h4 class="modal-title">Delete User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">					
+                    <p>Are you sure you want to delete these Records?</p>
+                    <p class="text-warning"><small>This action cannot be undone</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button  class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-danger" (click)="peopleService.deleteUser();" value="Delete">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <app-footer></app-footer>
+  

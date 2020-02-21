@@ -1,0 +1,15 @@
+.delete
+{
+    color:red;
+    font-size:30px
+}
+.edit
+{
+    color: green;
+    font-size: 30px;
+   
+}
+.addbutton
+{
+    margin-bottom: 15px;
+}
